@@ -13,12 +13,12 @@ const Navbar = () => {
                 <p>HOME</p>
                 <hr className={`w-2/4 border-none h-[1.5px] bg-gray-700 hidden`}/>
             </NavLink>
-             <NavLink to={'/about'} className="flex flex-col items-center justify-center ">
-                <p>ABOUT</p>
-                <hr className={`w-2/4 border-none h-[1.5px] bg-gray-700 hidden`}/>
-            </NavLink>
              <NavLink to={'/collection'} className="flex flex-col items-center justify-center ">
                 <p>COLLECTIONS</p>
+                <hr className={`w-2/4 border-none h-[1.5px] bg-gray-700 hidden`}/>
+            </NavLink>
+             <NavLink to={'/about'} className="flex flex-col items-center justify-center ">
+                <p>ABOUT</p>
                 <hr className={`w-2/4 border-none h-[1.5px] bg-gray-700 hidden`}/>
             </NavLink>
              <NavLink to={'/contact'} className="flex flex-col items-center justify-center ">
@@ -45,7 +45,7 @@ const Navbar = () => {
         <img src={assets.menu_icon} alt="menu icon image" onClick={()=>setVisible(true)} className='w-5 h-5 cursor-pointer sm:hidden'/>
         </div>
 
-        <div  className={`absolute  top-0 bottom-0 right-0 py-5 overflow-hidden bg-white transition-all text-black ${visible ? 'w-full':'w-0'}`}>
+        <div  className={`absolute  top-0 bottom-0 right-0 py-5 overflow-hidden bg-white transition-all text-black ${visible ? 'w-full':'w-0'} z-200`}>
             <div className='flex flex-col text-gray-600'>
                 <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
                     <img src={assets.dropdown_icon} alt="back button icon" className='h-4 rotate-180' />

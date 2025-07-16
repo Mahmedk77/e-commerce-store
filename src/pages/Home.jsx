@@ -1,11 +1,16 @@
 import React from 'react'
-import { Hero } from '../components'
+import { BestSeller, Hero, OurPolicy, LatestCollection, NewsLetter } from '../components'
+
 
 const Home = () => {
   return (
-    
+    <>
       <Hero/>
-    
+      <LatestCollection />
+      <BestSeller />
+      <OurPolicy />
+      <NewsLetter />
+    </>
   )
 }
 
