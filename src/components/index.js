@@ -9,4 +9,5 @@ export {default as NewsLetter} from './NewsLetter.jsx';
 export {default as Footer} from './Footer.jsx';
 export {default as Sidebar} from './Sidebar.jsx';
 export {default as Collections} from './Collections.jsx';
-export {default as SidebarItem} from './SidebarItem.jsx'
+export {default as SidebarItem} from './SidebarItem.jsx';
+export {default as Search} from './Search.jsx';

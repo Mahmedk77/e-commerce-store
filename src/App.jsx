@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router'
 import { About, Cart, Collection, Contact, 
          Home, Login, Orders, PlaceOrders, 
          Product } from './pages/index.js'
-import { Footer, Navbar } from './components'
+import { Footer, Navbar, Search } from './components'
 
 function App() {
   
@@ -11,6 +11,7 @@ function App() {
   <div className='px-4 sm:px-[5vm] md:px-[7vw] lg:px-[9vw]'> 
   
   <Navbar/>
+  <Search />
   <Routes>
     <Route path={'/'} exact element={<Home />}/>
     <Route path={'/about'} element={<About />}/>
