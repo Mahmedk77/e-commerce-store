@@ -10,24 +10,31 @@ import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [subCategory, setSubCategory] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [sortedOpt, setSortedOpt] = useState("relavent");
-
+  
   const applyFilter = () => {
     let productsCopy = products.slice(); //creates a copy of products;
     if (category.length > 0) {
       productsCopy = productsCopy.filter((item) =>
         category.includes(item.category)
+    );
+  }
+  if (subCategory.length > 0) {
+    productsCopy = productsCopy.filter((item) =>
+      subCategory.includes(item.subCategory)
+  );
+}
+if((search.length>0) && showSearch){
+      productsCopy = productsCopy.filter((item) => 
+        item.name.toLowerCase().includes(search.toLowerCase())
       );
-    }
-    if (subCategory.length > 0) {
-      productsCopy = productsCopy.filter((item) =>
-        subCategory.includes(item.subCategory)
-      );
+
+
     }
 
     if (sortedOpt) {
@@ -69,10 +76,10 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, sortedOpt]);
+  }, [category, subCategory, sortedOpt, search, showSearch]);
 
   return (
-    <div className="flex flex-col md:flex-row gap-1 sm:gap-10 pt-10 border-t">
+    <div className={`flex flex-col md:flex-row gap-1 sm:gap-10 pt-10 border-gray-200 ${showSearch ? "" : "border-t"}`}>
       {/* Filter Options */}
       <div className="min-w-60">
         <p className="my-2 text-xl flex items-center cursor-pointer gap-2">

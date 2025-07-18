@@ -4,7 +4,7 @@ import { products } from "../assets/assets.js";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
-    const [showSearch, setShowSearch] = useState(true);
+    const [showSearch, setShowSearch] = useState(false);
     const [search, setSearch] = useState("");
 
     const currency = "$";
