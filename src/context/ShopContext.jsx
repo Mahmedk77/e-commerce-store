@@ -48,7 +48,7 @@ const ShopContextProvider = (props) => {
     }
 
     useEffect(()=>{
-        console.log(cartItems);
+        getCartCount();
     }, [cartItems])
 
     const currency = "$";
