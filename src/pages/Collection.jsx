@@ -33,8 +33,6 @@ if((search.length>0) && showSearch){
       productsCopy = productsCopy.filter((item) => 
         item.name.toLowerCase().includes(search.toLowerCase())
       );
-
-
     }
 
     if (sortedOpt) {

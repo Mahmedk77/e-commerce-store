@@ -3,13 +3,14 @@ import { About, Cart, Collection, Contact,
          Home, Login, Orders, PlaceOrders, 
          Product } from './pages/index.js'
 import { Footer, Navbar, Search } from './components'
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
   
 
   return (
   <div className='px-4 sm:px-[5vm] md:px-[7vw] lg:px-[9vw]'> 
-  
+  <Toaster position='bottom-right' />
   <Navbar/>
   <Search />
   <Routes>

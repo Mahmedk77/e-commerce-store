@@ -7,8 +7,8 @@
     const location = useLocation();
     const [visible, setVisible] = useState(false);
     const {showSearch, setShowSearch, search, setSearch} = useContext(ShopContext);
-    console.log(location.pathname);
-    console.log(search)
+    // console.log(location.pathname);
+    // console.log(search)
   
     useEffect(() => {
     setVisible(location.pathname.includes('/collection'));
