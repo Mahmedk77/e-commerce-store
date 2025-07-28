@@ -12,3 +12,4 @@ export {default as Collections} from './Collections.jsx';
 export {default as SidebarItem} from './SidebarItem.jsx';
 export {default as Search} from './Search.jsx';
 export {default as RelatedProducts} from './RelatedProducts.jsx';
+export {default as CartTotal} from './CartTotal.jsx';

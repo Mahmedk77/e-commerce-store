@@ -33,10 +33,9 @@ const Product = () => {
   console.log(id)
   return productData ?  (
     <div  className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
-    {/* Product Data */}
-    <div  className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
-
-      {/* Product Images */}
+    {/*-----------------------------------------------------Product Data----------------------------------------------------------------------------------- */}
+    <div  className='flex gap-12 flex-col sm:flex-row'>
+    {/*-----------------------------------------------------Product Images----------------------------------------------------------------------------------- */}
       <div  className='flex flex-1 flex-col-reverse gap-3 sm:flex-row'>
         <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full'>
           {
@@ -65,7 +64,7 @@ const Product = () => {
           <div className='flex flex-col gap-4 my-8'>
             <p>Select Size</p>
             <div className='flex gap-2'>
-              {productData.sizes.map((item, idx) => (
+              {productData.sizes.map((item, idx) => ( //item here are only S,M,L
                 <button onClick={()=>setSize(item)} className={`cursor-pointer border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ""}`} key={idx}> {item} </button>
               ))}
             </div>

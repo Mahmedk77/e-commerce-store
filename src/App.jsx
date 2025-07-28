@@ -10,7 +10,7 @@ import { Footer, Navbar, Search } from './components'
 
   return (
   <div className='px-4 sm:px-[5vm] md:px-[7vw] lg:px-[9vw]'> 
-  <ToastContainer/>
+  <ToastContainer position='bottom-right' />
   <Navbar/>
   <Search />
   <Routes>
