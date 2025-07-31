@@ -29,7 +29,9 @@ const Navbar = () => {
             </NavLink>
         </ul>
         <div className='flex items-center gap-6'>
+            <Link to={'/collection'}>
             <img onClick={()=>setShowSearch((prev)=>!prev)} src={assets.search_icon} alt="search icon image"  className='w-5 cursor-pointer'/>
+            </Link>
             <div className='group relative'>
                 <img src={assets.profile_icon} alt="profile icon image" className='w-5 cursor-pointer'/>
                 <div className='group-hover:block hidden  absolute dropdown-menu right-0 pt-4'>
