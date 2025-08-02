@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router'
 import { About, Cart, Collection, Contact, 
-         Home, Login, Orders, PlaceOrders, 
+         Home, Login, Orders, PlaceOrder, 
          Product } from './pages/index.js'
 import { Footer, Navbar, Search } from './components'
  import { ToastContainer, toast } from 'react-toastify';
@@ -19,7 +19,7 @@ import { Footer, Navbar, Search } from './components'
     <Route path={'/collection'} element={<Collection />}/>
     <Route path={'/contact'} element={<Contact />}/>
     <Route path={'/cart'} element={<Cart />}/>
-    <Route path={'/placeOrders'} element={<PlaceOrders />}/>
+    <Route path={'/placeOrders'} element={<PlaceOrder />}/>
     <Route path={'/product/:id'} element={<Product />}/>
     <Route path={'/login'} element={<Login />}/>
     <Route path={'/orders'} element={<Orders />}/>
